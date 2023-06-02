@@ -3,8 +3,8 @@ from . import main_bp
 
 @main_bp.route('/login')
 def login():
-    return jsonify()
+    return jsonify({'hello':1})
 
 @main_bp.route('/logout')
 def louout():
-    return jsonify()
+    return jsonify({'hello':1})
