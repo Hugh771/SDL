@@ -1,3 +1,3 @@
 Config = {
-    'SQLALCHEMY_DATABASE_URI':'127.0.0.1'
+    'SQLALCHEMY_DATABASE_URI':'mysql+pymysql://root:123456@!#@192.168.52.130:3306/test'
 }
