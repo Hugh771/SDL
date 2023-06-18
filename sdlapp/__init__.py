@@ -1,7 +1,7 @@
 from flask import Flask
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
-from flask_jwt_extended import jwt_manager
+from sdlapp.auth.auth import jwt
 db = SQLAlchemy()
 
 def create_app():
@@ -10,7 +10,7 @@ def create_app():
 
     db.init_app(app)
 
-    jwt_manager(app)
+    jwt.init_app(app)
 
     from sdlapp.main import main_bp
     app.register_blueprint(main_bp)
