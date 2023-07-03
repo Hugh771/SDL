@@ -9,7 +9,7 @@ def create_app():
     app.config.update(Config)
 
     db.init_app(app)
-
+    db.create_all()
     jwt.init_app(app)
 
     from sdlapp.main import main_bp
